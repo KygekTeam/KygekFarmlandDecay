@@ -1,0 +1,13 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/KygekTeam/KygekFarmlandDecay
+build-by-default: true
+branches:
+- main
+projects:
+  KygekFarmlandDecay:
+    path: ""
+    libs:
+    - src: JackMD/UpdateNotifier/UpdateNotifier
+      version: ^2.1
+    - src: KygekTeam/KtpmplCfs/ktpmpl-cfs
+      version: ^1.0
+...
