@@ -8,6 +8,6 @@ projects:
     libs:
     - src: JackMD/UpdateNotifier/UpdateNotifier
       version: ^2.1
-    - src: KygekTeam/KtpmplCfs/ktpmpl-cfs
+    - src: KygekTeam/ktpmpl-cfs/ktpmpl-cfs
       version: ^1.0
 ...
