@@ -1,0 +1,16 @@
+---
+# Implements vanilla functionality of farmland becomes dirt when jumped or fallen
+# Copyright (C) 2021 KygekTeam
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# he Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+name: KygekFarmlandDecay
+version: 1.0.0
+main: KygekTeam\KygekFarmlandDecay\FarmlandDecay
+api: 3.0.0
+author: KygekTeam
+website: "https://github.com/KygekTeam/KygekFarmlandDecay"
+...
