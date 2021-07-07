@@ -8,7 +8,7 @@
 # (at your option) any later version.
 
 name: KygekFarmlandDecay
-version: 1.0.0
+version: 1.0.1
 main: KygekTeam\KygekFarmlandDecay\FarmlandDecay
 api: 3.0.0
 author: KygekTeam
