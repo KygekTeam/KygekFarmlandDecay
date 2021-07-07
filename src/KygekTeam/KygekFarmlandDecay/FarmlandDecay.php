@@ -36,7 +36,7 @@ class FarmlandDecay extends PluginBase implements Listener {
         // Checks if block below the destination is farmland
         if ($level->getBlock($block = $event->getTo()->subtract(0, 1, 0))->getId() !== Block::FARMLAND) return;
         // Must be 0.5 to work properly
-        if (!(($event->getFrom()->getY() - 0.5) >= $event->getTo()->getY())) return;
+        if (($event->getFrom()->getY() - 0.5) < $event->getTo()->getY()) return;
         if ($event->getPlayer()->isFlying()) return;
 
         $level->setBlock($block, BlockFactory::get(Block::DIRT));
