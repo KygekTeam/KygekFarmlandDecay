@@ -36,7 +36,7 @@ class FarmlandDecay extends PluginBase implements Listener {
         // Must be 0.5 to work properly
         if (($event->getFrom()->getY() - 0.5) < $event->getTo()->getY()) return;
         if ($event->getPlayer()->isFlying()) return;
-        $$event->getPlayer()->teleport($event->getTo()->add(0, 0.1));
+        $event->getPlayer()->teleport($event->getTo()->add(0, 0.1));
         $level->setBlock($block, Block::get(Block::DIRT));
     }
 
