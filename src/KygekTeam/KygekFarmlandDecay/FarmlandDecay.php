@@ -16,33 +16,28 @@ namespace KygekTeam\KygekFarmlandDecay;
 
 use KygekTeam\KtpmplCfs\KtpmplCfs;
 use pocketmine\block\Block;
-use pocketmine\block\BlockFactory;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\plugin\PluginBase;
 
 class FarmlandDecay extends PluginBase implements Listener {
 
-    public function onEnable() {
+    public function onEnable() : void {
         $this->saveDefaultConfig();
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         KtpmplCfs::checkUpdates($this);
     }
 
-    public function onMove(PlayerMoveEvent $event) {
+    public function onMove(PlayerMoveEvent $event) : void {
         if ($event->isCancelled()) return;
         $level = $event->getPlayer()->getLevelNonNull();
-
         // Checks if block below the destination is farmland
         if ($level->getBlock($block = $event->getTo()->subtract(0, 1, 0))->getId() !== Block::FARMLAND) return;
         // Must be 0.5 to work properly
         if (($event->getFrom()->getY() - 0.5) < $event->getTo()->getY()) return;
-
-        $player = $event->getPlayer();
-        if ($player->isFlying()) return;
-
-        $player->teleport($event->getTo()->add(0, 0.1));
-        $level->setBlock($block, BlockFactory::get(Block::DIRT));
+        if ($event->getPlayer()->isFlying()) return;
+        $$event->getPlayer()->teleport($event->getTo()->add(0, 0.1));
+        $level->setBlock($block, Block::get(Block::DIRT));
     }
 
 }
