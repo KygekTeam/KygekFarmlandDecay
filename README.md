@@ -3,6 +3,8 @@
 [![Poggit](https://poggit.pmmp.io/shield.dl.total/KygekFarmlandDecay)](https://poggit.pmmp.io/p/KygekFarmlandDecay)
 [![Discord](https://img.shields.io/discord/735439472992321587.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/CXtqUZv)
 
+**NOTICE:** There will be no PM4 version of this plugin, because the farmland decaying behavior has been implemented in PocketMine-MP 4. See PR https://github.com/pmmp/PocketMine-MP/pull/4434 for more details.
+
 A PocketMine-MP plugin that implements vanilla functionality of farmland becomes dirt when jumped or fallen.
 
 # Features
